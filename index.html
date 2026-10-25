@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart QR Code Generator</title>
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Smart QR Code Generator</h1> <hr>
+        <p>Search anything by name and generate its QR code and URL.</p>
+
+        <input
+            type="text"
+            id="qrInput"
+            placeholder="Enter any name or topic..."
+        >
+
+        <button id="generateBtn">Generate QR + URL</button>
+
+        <div id="result" hidden>
+            <h3>Your QR Code</h3>
+            <div id="qrcode"></div>
+
+            <h3>Generated URL</h3>
+            <a id="generatedUrl" href="#" target="_blank"
+               rel="noopener noreferrer"></a>
+
+            <button id="copyBtn">Copy URL</button>
+
+            <div class="downloads">
+                <button id="pngBtn">Download PNG</button>
+                <button id="jpgBtn">Download JPG</button>
+                <button id="svgBtn">Download SVG</button>
+            </div>
+        </div>
+
+        <p id="status" role="status"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
